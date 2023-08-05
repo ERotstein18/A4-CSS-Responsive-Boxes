@@ -1,3 +1,58 @@
 body {
   background: blanchedalmond;
 }
+
+* {
+  border: 2px solid pink;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  min-height: 75vh;
+  align-content: space-between;
+}
+
+flexbox-item {
+  width: 200px;
+  margin: 10px;
+  border: 3px solid #333;
+  color: chartreuse;
+}
+item-a, item-b {
+  flex-grow: 1;
+}
+item-a {
+  color: blueviolet;
+  min-height: 100px;
+  order: 1;
+  align-content: first baseline;
+}
+
+item-b {
+  min-height: 150px;
+  -ms-flex-order: 2;
+}
+
+item-c {
+  min-height: 50px;
+  order: 3;
+  align-self: flex-end;
+}
+main {
+  flex-grow: 5;
+}
+
+@media (min-width: 500px) {
+  .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  item-a {
+    width: 100%;
+  }
+  item-a, item-b, item-c {
+    margin: 5em;
+  }
+  
+}
