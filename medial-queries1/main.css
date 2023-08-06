@@ -3,38 +3,33 @@ body {
 }
 
 * {
-  border: 2px solid pink;
+  border: 2px solid paleturquoise;
 }
 .container {
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
   min-height: 75vh;
-  align-content: space-between;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-flexbox-item {
-  width: 200px;
-  margin: 10px;
-  border: 3px solid #333;
-  color: chartreuse;
-}
-item-a, item-b {
+
+header, footer {
   flex-grow: 1;
 }
-item-a {
-  color: blueviolet;
+.header {
+color: blueviolet;
   min-height: 100px;
   order: 1;
   align-content: first baseline;
 }
 
-item-b {
+.main {
   min-height: 150px;
   -ms-flex-order: 2;
+  color:blue;
 }
 
-item-c {
+.footer {
   min-height: 50px;
   order: 3;
   align-self: flex-end;
@@ -48,10 +43,10 @@ main {
     flex-direction: row;
     flex-wrap: wrap;
   }
-  item-a {
+  header {
     width: 100%;
   }
-  item-a, item-b, item-c {
+  main, footer, header {
     margin: 5em;
   }
   
